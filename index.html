@@ -9,50 +9,90 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f4f6f8;
+      background-color: #f4f6f8;
+      color: #222;
     }
 
     header {
-      background: #1d3557;
+      background-color: #1d3557;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
     }
 
     nav {
-      background: #457b9d;
+      background-color: #457b9d;
       text-align: center;
-      padding: 10px;
+      padding: 12px;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     section {
-      padding: 30px;
+      padding: 30px 20px;
       max-width: 1000px;
       margin: auto;
+    }
+
+    h2 {
+      color: #1d3557;
+      text-align: center;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
 
     .card {
       background: white;
       padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card a {
+      color: #1d3557;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
     }
 
     iframe {
       width: 100%;
-      height: 250px;
+      height: 220px;
       border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
-
 <body>
 
 <header>
@@ -63,33 +103,57 @@
 <nav>
   <a href="#dashboard">Dashboard</a>
   <a href="#resources">Resources</a>
+  <a href="#videos">Videos</a>
 </nav>
 
 <section id="dashboard">
   <h2>Student Dashboard</h2>
-  <p>Track your progress and learning.</p>
+  <p style="text-align:center;">StudyStars Hub helps students access study guides, video lessons, and academic support in one organized place.</p>
 </section>
 
 <section id="resources">
-  <h2>Learning Resources</h2>
+  <h2>Study Guide PDFs</h2>
 
-  <div class="card">
-    <h3>📘 Study Guides</h3>
-    <p>Download PDFs:</p>
+  <div class="card-container">
+    <div class="card">
+      <h3>Algebra Review</h3>
+      <p>Practice equations, graphing, and functions.</p>
+      <a href="pdfs/algebra.pdf" target="_blank">Open PDF</a>
+    </div>
 
-    <ul>
-      <li><a href="pdfs/algebra.pdf" target="_blank">Algebra Guide</a></li>
-      <li><a href="pdfs/science.pdf" target="_blank">Science Notes</a></li>
-    </ul>
+    <div class="card">
+      <h3>Science Notes</h3>
+      <p>Review important science vocabulary and concepts.</p>
+      <a href="pdfs/science.pdf" target="_blank">Open PDF</a>
+    </div>
+
+    <div class="card">
+      <h3>History Guide</h3>
+      <p>Study key events, dates, and terms.</p>
+      <a href="pdfs/history.pdf" target="_blank">Open PDF</a>
+    </div>
   </div>
-
-  <div class="card">
-    <h3>🎥 Video Lessons</h3>
-
-    <iframe src="https://www.youtube.com/embed/8zjWQ0GxXkY"></iframe>
-  </div>
-
 </section>
+
+<section id="videos">
+  <h2>Video Lessons</h2>
+
+  <div class="card-container">
+    <div class="card">
+      <h3>Math Video Lesson</h3>
+      <iframe src="https://www.youtube.com/embed/8zjWQ0GxXkY" allowfullscreen></iframe>
+    </div>
+
+    <div class="card">
+      <h3>Science Video Lesson</h3>
+      <iframe src="https://www.youtube.com/embed/2V4v4p6W6yI" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>FBLA Website Design Project | StudyStars Hub</p>
+</footer>
 
 </body>
 </html>
